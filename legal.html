@@ -4,7 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RYDL - Privacy Policy & Terms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --warm-cream: #faf7f0;
+            --soft-brown: #8b7355;
+            --deep-brown: #5d4e37;
+            --cozy-orange: #d4853d;
+            --gentle-green: #7a9471;
+            --warm-white: #ffffff;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+            --border-soft: #e8e1d5;
+            --shadow-soft: rgba(139, 115, 85, 0.15);
+            --shadow-warm: rgba(212, 133, 61, 0.2);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,120 +29,282 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--warm-cream) 0%, #f5f0e8 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f7;
-            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Cozy background elements */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 133, 61, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: gentleFloat 25s ease-in-out infinite;
+        }
+        
+        body::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(122, 148, 113, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+            animation: gentleFloat 20s ease-in-out infinite reverse;
+        }
+        
+        @keyframes gentleFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(20px, -15px) scale(1.05); }
+            66% { transform: translate(-15px, 20px) scale(0.95); }
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: var(--warm-white);
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px var(--shadow-soft);
+            border: 1px solid var(--border-soft);
+            margin: 40px 20px;
+            position: relative;
+            z-index: 1;
         }
         
         .header {
             text-align: center;
             margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #007AFF;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border-soft);
         }
         
         .logo {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             margin: 0 auto 20px;
             display: block;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px var(--shadow-soft);
         }
         
         h1 {
-            font-size: 2.5em;
-            color: #007AFF;
-            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--deep-brown);
+            margin-bottom: 15px;
+            letter-spacing: -1px;
         }
         
         h2 {
-            font-size: 1.8em;
-            color: #1d1d1f;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--cozy-orange);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-soft);
         }
         
         h3 {
-            font-size: 1.3em;
-            color: #333;
+            font-size: 1.4rem;
+            color: var(--soft-brown);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
             margin-top: 20px;
             margin-bottom: 10px;
+            font-weight: 600;
         }
         
         p, li {
-            margin-bottom: 10px;
-            color: #555;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.7;
         }
         
         ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-dark);
+            font-weight: 600;
         }
         
         .nav {
             display: flex;
-            gap: 20px;
+            gap: 16px;
             justify-content: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
         }
         
         .nav a {
-            color: #007AFF;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dark);
             text-decoration: none;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background 0.2s;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--cozy-orange) 0%, #c8763a 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .nav a:hover::before {
+            opacity: 1;
         }
         
         .nav a:hover {
-            background: #f0f0f0;
+            color: var(--warm-white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--shadow-warm);
+            border-color: var(--cozy-orange);
+        }
+
+        .nav a:hover span {
+            position: relative;
+            z-index: 1;
         }
         
         .updated {
-            color: #86868b;
-            font-size: 0.9em;
-            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-style: italic;
         }
         
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         
         .contact {
-            background: #f5f5f7;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
+            background: linear-gradient(135deg, var(--warm-cream) 0%, #f8f4ed 100%);
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 40px;
+            border: 1px solid var(--border-soft);
+        }
+
+        .contact h3 {
+            color: var(--cozy-orange);
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--cozy-orange);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--deep-brown);
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--soft-brown);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid var(--border-soft);
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--warm-white);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px var(--shadow-soft);
         }
         
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .container {
-                padding: 20px;
+                padding: 30px 25px;
+                margin: 20px 15px;
             }
             
             h1 {
-                font-size: 2em;
+                font-size: 2.2rem;
             }
             
             h2 {
-                font-size: 1.5em;
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav a {
+                min-width: 160px;
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <a href="index.html" class="back-link">
+            <span>←</span> Back to RYDL
+        </a>
+        
         <div class="header">
             <img src="RYDL-Logo-Light.png" alt="RYDL Logo" class="logo">
             <h1>RYDL</h1>
@@ -133,8 +312,12 @@
         </div>
         
         <div class="nav">
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms of Service</a>
+            <a href="#privacy">
+                <span>🔒 Privacy Policy</span>
+            </a>
+            <a href="#terms">
+                <span>📄 Terms of Service</span>
+            </a>
         </div>
         
         <!-- PRIVACY POLICY -->
@@ -207,8 +390,8 @@
             <h3>Third-Party Services</h3>
             <p>We use the following third-party services:</p>
             <ul>
-                <li><strong>Firebase</strong> (Google): Authentication, database, and analytics - <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
-                <li><strong>Expo:</strong> App development framework and push notifications - <a href="https://expo.dev/privacy" target="_blank">Privacy Policy</a></li>
+                <li><strong>Firebase</strong> (Google): Authentication, database, and analytics - <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                <li><strong>Expo:</strong> App development framework and push notifications - <a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
             </ul>
             
             <h3>Push Notifications</h3>
@@ -287,7 +470,7 @@
         <div class="contact">
             <h3>Contact Us</h3>
             <p>If you have questions about this privacy policy, terms of service, or our data practices:</p>
-            <p><strong>Email:</strong> <a href="mailto:support@rydl.app">support@rydl.app</a></p>
+            <p><strong>Email:</strong> <a href="mailto:support@rydl.app">support@RYDL.app</a></p>
             <p><strong>In-App:</strong> Settings → Privacy Policy / Terms of Service</p>
         </div>
     </div>
