@@ -130,28 +130,28 @@
         }
 
         .main-content {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .links-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(150px, 1fr));
-            gap: 12px 14px;
-            margin: 0 auto 60px;
-            max-width: 460px;
-            align-items: center;
-            justify-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px 16px;
+            margin: 0 auto 30px;
+            max-width: 400px;
+            align-items: stretch;
+            justify-items: stretch;
             justify-content: center;
         }
 
         .link-card {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 14px 20px;
-            background: rgba(255, 255, 255, 0.96);
-            border-radius: 20px;
+            padding: 18px 24px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
@@ -162,16 +162,17 @@
             overflow: hidden;
             -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
-            box-shadow: 0 10px 30px rgba(139, 115, 85, 0.06);
+            box-shadow: 0 8px 24px rgba(139, 115, 85, 0.08);
             width: 100%;
-            max-width: 240px;
             box-sizing: border-box;
         }
 
         /* utility: make an item span both columns (used for the Discord CTA) */
-    .span-full { grid-column: 1 / -1; justify-self: center; max-width: 280px; }
-
-        .link-card::before {
+        .span-full { 
+            grid-column: 1 / -1; 
+            justify-self: stretch;
+            margin-top: 4px;
+        }        .link-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -243,31 +244,33 @@
 
         .footer {
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 0 30px;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 0;
             flex-wrap: wrap;
         }
 
         .footer-link {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             color: var(--soft-brown);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 10px 16px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.6);
-            border: 0.5px solid var(--border-soft);
+            padding: 12px 20px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(232, 225, 213, 0.6);
             letter-spacing: 0.2px;
+            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.06);
         }
 
         .footer-link:hover {
@@ -279,14 +282,15 @@
 
         .coming-soon {
             display: inline-block;
-            margin-left: 10px;
-            font-size: 0.85rem;
+            margin-left: 8px;
+            font-size: 0.8rem;
             color: var(--text-light);
-            background: rgba(250,247,240,0.6);
-            padding: 6px 10px;
-            border-radius: 10px;
-            border: 1px solid rgba(232,225,213,0.6);
+            background: rgba(250,247,240,0.8);
+            padding: 5px 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(232,225,213,0.5);
             vertical-align: middle;
+            font-weight: 400;
         }
 
         .contact {
@@ -345,16 +349,19 @@
 
             .links-grid {
                 grid-template-columns: 1fr;
-                gap: 12px;
-                max-width: 420px;
-                padding: 0 12px;
+                gap: 14px;
+                max-width: 100%;
+                padding: 0 20px;
             }
 
             .link-card {
-                padding: 14px 22px;
+                padding: 16px 24px;
                 font-size: 0.95rem;
                 width: 100%;
-                max-width: 420px;
+            }
+
+            .span-full {
+                margin-top: 2px;
             }
 
             .footer-links {
