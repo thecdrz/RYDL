@@ -117,9 +117,10 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
             color: var(--soft-brown);
-            margin-top: 45px;
-            margin-bottom: 18px;
+            margin-top: 50px;
+            margin-bottom: 22px;
             font-weight: 600;
+            letter-spacing: -0.3px;
         }
         
         h3 {
@@ -157,6 +158,12 @@
             border-radius: 20px;
             margin: 30px 0;
             border: 1px solid rgba(232, 225, 213, 0.6);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-box:hover {
+            background: linear-gradient(135deg, rgba(250, 247, 240, 0.8) 0%, rgba(248, 244, 237, 0.8) 100%);
+            box-shadow: 0 8px 24px var(--shadow-soft);
         }
         
         .contact-box h3 {
@@ -196,23 +203,31 @@
         
         .faq-item {
             background: rgba(250, 247, 240, 0.5);
-            padding: 20px;
-            border-radius: 14px;
-            margin-bottom: 20px;
+            padding: 22px 24px;
+            border-radius: 16px;
+            margin-bottom: 18px;
             border-left: 3px solid var(--cozy-orange);
             border: 1px solid rgba(232, 225, 213, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            background: rgba(250, 247, 240, 0.7);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px var(--shadow-soft);
         }
         
         .faq-question {
-            font-weight: 700;
-            font-size: 1.15em;
-            color: #1d1d1f;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--deep-brown);
             margin-bottom: 10px;
         }
         
         .faq-answer {
-            color: #555;
+            color: var(--text-light);
             line-height: 1.7;
+            font-size: 0.975rem;
         }
         
         .quick-links {
@@ -251,10 +266,17 @@
         
         .feature-card {
             background: rgba(250, 247, 240, 0.5);
-            padding: 25px;
+            padding: 28px;
             border-radius: 16px;
             text-align: center;
             border: 1px solid rgba(232, 225, 213, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background: rgba(250, 247, 240, 0.7);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-soft);
         }
         
         .feature-icon {
@@ -263,9 +285,9 @@
         }
         
         .feature-title {
-            font-weight: 700;
-            font-size: 1.2em;
-            color: #1d1d1f;
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: var(--deep-brown);
             margin-bottom: 10px;
         }
         
