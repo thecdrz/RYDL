@@ -98,8 +98,14 @@
             margin: 0 auto;
             display: block;
             border-radius: 20px;
-            box-shadow: 0 12px 30px var(--shadow-soft);
+            box-shadow: 0 12px 30px var(--shadow-soft), 0 4px 8px rgba(139, 115, 85, 0.08);
             animation: logoFloat 6s ease-in-out infinite;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .logo:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 40px var(--shadow-soft), 0 6px 12px rgba(139, 115, 85, 0.12);
         }
 
         @keyframes logoFloat {
@@ -112,6 +118,8 @@
             color: var(--soft-brown);
             margin-bottom: 20px;
             font-weight: 500;
+            text-shadow: 0 1px 2px rgba(139, 115, 85, 0.1);
+            letter-spacing: 0.3px;
         }
 
         .description {
@@ -119,7 +127,8 @@
             color: var(--text-light);
             max-width: 500px;
             margin: 0 auto 40px;
-            line-height: 1.6;
+            line-height: 1.7;
+            letter-spacing: 0.1px;
         }
 
         .main-content {
@@ -197,6 +206,7 @@
             position: relative;
             z-index: 1;
             white-space: nowrap;
+            letter-spacing: 0.2px;
         }
 
         .link-card.discord {
@@ -211,6 +221,15 @@
 
         .link-card.discord::before {
             background: linear-gradient(135deg, #6b825f 0%, #5a6e52 100%);
+        }
+
+        .link-card.discord:hover {
+            animation: gentlePulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes gentlePulse {
+            0%, 100% { transform: translateY(-4px) scale(1.05); }
+            50% { transform: translateY(-4px) scale(1.06); }
         }
 
         .footer {
@@ -234,11 +253,12 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
-            padding: 8px 12px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.5);
-            border: 1px solid var(--border-soft);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 10px 16px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.6);
+            border: 0.5px solid var(--border-soft);
+            letter-spacing: 0.2px;
         }
 
         .footer-link:hover {
@@ -252,6 +272,7 @@
             color: var(--text-light);
             font-size: 0.9rem;
             margin-top: 15px;
+            letter-spacing: 0.2px;
         }
 
         .contact a {
@@ -259,10 +280,27 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .contact a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--cozy-orange);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
         }
 
         .contact a:hover {
             color: var(--deep-brown);
+        }
+
+        .contact a:hover::after {
+            transform: scaleX(1);
         }
 
         /* Responsive Design */
