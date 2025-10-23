@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RYDL - Calm Logic Wrapped in Cozy Vibes</title>
     <meta name="description" content="RYDL is a relaxing number puzzle game. Challenge friends, climb leaderboards, and build your winning streak!">
+    <!-- Cache bust: v2.1 - Fixed Discord button sizing -->
     <style>
         * {
             margin: 0;
@@ -118,10 +119,10 @@
         
         .links {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-bottom: 50px;
-            max-width: 600px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -194,6 +195,9 @@
         
         .link-card.discord {
             background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
+            /* Ensure Discord button is same size as others */
+            grid-column: auto;
+            flex: none;
         }
         
         .link-card.discord .link-icon,
