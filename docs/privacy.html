@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RYDL - Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --warm-cream: #faf7f0;
+            --soft-brown: #8b7355;
+            --deep-brown: #5d4e37;
+            --cozy-orange: #d4853d;
+            --gentle-green: #7a9471;
+            --warm-white: #ffffff;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+            --border-soft: #e8e1d5;
+            --shadow-soft: rgba(139, 115, 85, 0.15);
+            --shadow-warm: rgba(212, 133, 61, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--warm-cream) 0%, #f5f0e8 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 133, 61, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: gentleFloat 25s ease-in-out infinite;
+        }
+        
+        body::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(122, 148, 113, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+            animation: gentleFloat 20s ease-in-out infinite reverse;
+        }
+        
+        @keyframes gentleFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(20px, -15px) scale(1.05); }
+            66% { transform: translate(-15px, 20px) scale(0.95); }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.85);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            padding: 60px;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px var(--shadow-soft), 0 0 1px var(--border-soft);
+            border: 1px solid rgba(232, 225, 213, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            display: block;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px var(--shadow-soft);
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--deep-brown);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            font-weight: 600;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--soft-brown);
+            margin-top: 45px;
+            margin-bottom: 18px;
+            padding-bottom: 0;
+            font-weight: 600;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            color: var(--soft-brown);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        p, li {
+            margin-bottom: 12px;
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--cozy-orange);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--deep-brown);
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--soft-brown);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 35px;
+            padding: 10px 18px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--border-soft);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            background: var(--warm-white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-soft);
+            text-decoration: none;
+            color: var(--cozy-orange);
+        }
+        
+        .updated {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-top: 8px;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, rgba(250, 247, 240, 0.6) 0%, rgba(248, 244, 237, 0.6) 100%);
+            padding: 35px;
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 1px solid rgba(232, 225, 213, 0.6);
+        }
+
+        .contact h3 {
+            color: var(--soft-brown);
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+                margin: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* bottom-contact removed — Contact already present above */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back-link">
+            <span>←</span> Back to RYDL
+        </a>
+        
+        <div class="header">
+            <img src="RYDL-Logo-Light.png" alt="RYDL Logo" class="logo">
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last Updated: October 24, 2025</p>
+        </div>
+        
+        <h3>Introduction</h3>
+        <p>Welcome to RYDL ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+        
+        <h3>Information We Collect</h3>
+        <h4>Information You Provide:</h4>
+        <ul>
+            <li><strong>Username:</strong> You choose a username to identify yourself in the game</li>
+            <li><strong>Game Statistics:</strong> Your game scores, win/loss records, streaks, and gameplay history</li>
+            <li><strong>Social Data:</strong> Friend connections, challenge history, and leaderboard participation</li>
+        </ul>
+        
+        <h4>Automatically Collected Information:</h4>
+        <ul>
+            <li><strong>Device Information:</strong> Device type, operating system version, and unique device identifiers</li>
+            <li><strong>Usage Data:</strong> Game sessions, feature usage, and app performance data</li>
+            <li><strong>Firebase Analytics:</strong> We use Firebase Analytics to understand how users interact with our app</li>
+        </ul>
+        
+        <h3>How We Use Your Information</h3>
+        <p>We use the collected information to:</p>
+        <ul>
+            <li>Provide and maintain the game functionality</li>
+            <li>Enable multiplayer features and friend connections</li>
+            <li>Display leaderboards and track your progress</li>
+            <li>Improve game performance and user experience</li>
+            <li>Send push notifications (if you opt-in)</li>
+            <li>Detect and prevent technical issues</li>
+        </ul>
+        
+        <h3>Data Storage and Security</h3>
+        <ul>
+            <li><strong>Firebase:</strong> We use Google Firebase to securely store user data, including usernames, game statistics, and social connections</li>
+            <li><strong>Encryption:</strong> Data is transmitted using secure HTTPS connections</li>
+            <li><strong>Retention:</strong> Your data is retained as long as your account is active</li>
+        </ul>
+        
+        <h3>Sharing of Information</h3>
+        <p><strong>We do NOT:</strong></p>
+        <ul>
+            <li>Sell your personal information to third parties</li>
+            <li>Share your data with advertisers</li>
+            <li>Use your data for marketing purposes</li>
+        </ul>
+        
+        <p><strong>We MAY share information:</strong></p>
+        <ul>
+            <li>With Firebase/Google services to provide app functionality</li>
+            <li>If required by law or to protect our legal rights</li>
+            <li>In the event of a business transfer or acquisition</li>
+        </ul>
+        
+        <h3>Your Rights</h3>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access your data</li>
+            <li>Request deletion of your data</li>
+            <li>Opt-out of push notifications</li>
+            <li>Reset your statistics</li>
+        </ul>
+        
+        <h3>Children's Privacy</h3>
+        <p>RYDL is not intended for children under 13. We do not knowingly collect data from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.</p>
+        
+        <h3>Third-Party Services</h3>
+        <p>We use the following third-party services:</p>
+        <ul>
+            <li><strong>Firebase</strong> (Google): Authentication, database, and analytics - <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+            <li><strong>Expo:</strong> App development framework and push notifications - <a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+        </ul>
+        
+        <h3>Push Notifications</h3>
+        <p>If you opt-in to push notifications, we may send:</p>
+        <ul>
+            <li>Friend challenge notifications</li>
+            <li>Game result updates</li>
+            <li>Daily puzzle reminders</li>
+        </ul>
+        <p>You can disable notifications in your device settings at any time.</p>
+        
+        <h3>Changes to This Policy</h3>
+        <p>We may update this privacy policy from time to time. We will notify you of significant changes by updating the "Last Updated" date.</p>
+        
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>If you have questions about this privacy policy or our data practices:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@rydl.app">support@RYDL.app</a></p>
+            <p><strong>In-App:</strong> Settings → Privacy Policy</p>
+        </div>
+    </div>
+</body>
+</html>
