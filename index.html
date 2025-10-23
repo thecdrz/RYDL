@@ -122,22 +122,14 @@
         }
 
         .main-content {
-            background: var(--warm-white);
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 15px 40px var(--shadow-soft);
-            border: 1px solid var(--border-soft);
-            margin-bottom: 30px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 40px;
         }
 
         .links-grid {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin-bottom: 20px;
+            gap: 16px;
+            margin-bottom: 40px;
             flex-wrap: wrap;
         }
 
@@ -145,17 +137,20 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 18px;
-            background: linear-gradient(135deg, var(--warm-cream) 0%, #f8f4ed 100%);
-            border-radius: 12px;
+            padding: 16px 24px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid var(--border-soft);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             position: relative;
             overflow: hidden;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(139, 115, 85, 0.1);
         }
 
         .link-card::before {
@@ -176,8 +171,8 @@
         }
 
         .link-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px var(--shadow-warm);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px var(--shadow-warm);
             border-color: var(--cozy-orange);
         }
 
@@ -189,14 +184,14 @@
         }
 
         .link-icon {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
             position: relative;
             z-index: 1;
         }
 
         .link-text {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
             position: relative;
             z-index: 1;
@@ -204,7 +199,7 @@
         }
 
         .link-card.discord {
-            background: linear-gradient(135deg, var(--gentle-green) 0%, #6b825f 100%);
+            background: rgba(122, 148, 113, 0.9);
             border-color: var(--gentle-green);
         }
 
@@ -276,7 +271,7 @@
             }
 
             .main-content {
-                padding: 25px 20px;
+                padding: 20px 15px;
             }
 
             .logo {
@@ -295,12 +290,14 @@
             .links-grid {
                 flex-direction: column;
                 align-items: center;
-                gap: 8px;
+                gap: 12px;
             }
 
             .link-card {
-                padding: 10px 16px;
-                font-size: 0.85rem;
+                padding: 14px 20px;
+                font-size: 0.9rem;
+                min-width: 140px;
+                justify-content: center;
             }
 
             .footer-links {
