@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RYDL - Terms of Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --warm-cream: #faf7f0;
+            --soft-brown: #8b7355;
+            --deep-brown: #5d4e37;
+            --cozy-orange: #d4853d;
+            --gentle-green: #7a9471;
+            --warm-white: #ffffff;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+            --border-soft: #e8e1d5;
+            --shadow-soft: rgba(139, 115, 85, 0.15);
+            --shadow-warm: rgba(212, 133, 61, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--warm-cream) 0%, #f5f0e8 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 133, 61, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: gentleFloat 25s ease-in-out infinite;
+        }
+        
+        body::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(122, 148, 113, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+            animation: gentleFloat 20s ease-in-out infinite reverse;
+        }
+        
+        @keyframes gentleFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(20px, -15px) scale(1.05); }
+            66% { transform: translate(-15px, 20px) scale(0.95); }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.85);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            padding: 60px;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px var(--shadow-soft), 0 0 1px var(--border-soft);
+            border: 1px solid rgba(232, 225, 213, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            display: block;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px var(--shadow-soft);
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--deep-brown);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+            font-weight: 600;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--soft-brown);
+            margin-top: 45px;
+            margin-bottom: 18px;
+            padding-bottom: 0;
+            font-weight: 600;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            color: var(--soft-brown);
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        p, li {
+            margin-bottom: 12px;
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--cozy-orange);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--deep-brown);
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--soft-brown);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 35px;
+            padding: 10px 18px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--border-soft);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            background: var(--warm-white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow-soft);
+            text-decoration: none;
+            color: var(--cozy-orange);
+        }
+        
+        .updated {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-top: 8px;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, rgba(250, 247, 240, 0.6) 0%, rgba(248, 244, 237, 0.6) 100%);
+            padding: 35px;
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 1px solid rgba(232, 225, 213, 0.6);
+        }
+
+        .contact h3 {
+            color: var(--soft-brown);
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+                margin: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back-link">
+            <span>←</span> Back to RYDL
+        </a>
+        
+        <div class="header">
+            <img src="RYDL-Logo-Light.png" alt="RYDL Logo" class="logo">
+            <h1>Terms of Service</h1>
+            <p class="updated">Last Updated: October 24, 2025</p>
+        </div>
+        
+        <h3>1. Acceptance of Terms</h3>
+        <p>By downloading, installing, or using RYDL, you agree to be bound by these Terms of Service. If you do not agree, do not use the app.</p>
+        
+        <h3>2. License to Use</h3>
+        <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use RYDL for personal, non-commercial purposes.</p>
+        
+        <h3>3. User Conduct</h3>
+        <p>You agree NOT to:</p>
+        <ul>
+            <li>Use offensive, inappropriate, or abusive usernames</li>
+            <li>Harass, bully, or threaten other users</li>
+            <li>Cheat or exploit bugs to gain unfair advantages</li>
+            <li>Attempt to hack or reverse engineer the app</li>
+            <li>Spam other users with challenges or requests</li>
+        </ul>
+        
+        <h3>4. User-Generated Content</h3>
+        <p>Your username and game results may be visible to other users. You are responsible for any content you create. We reserve the right to remove inappropriate usernames.</p>
+        
+        <h3>5. Account Termination</h3>
+        <p>We reserve the right to suspend or terminate your account if you violate these terms or engage in inappropriate behavior.</p>
+        
+        <h3>6. Disclaimer of Warranties</h3>
+        <p>RYDL is provided "as is" without warranties of any kind. We do not guarantee:</p>
+        <ul>
+            <li>Uninterrupted or error-free service</li>
+            <li>That the app will meet your expectations</li>
+            <li>That data will never be lost</li>
+        </ul>
+        
+        <h3>7. Limitation of Liability</h3>
+        <p>We are not liable for:</p>
+        <ul>
+            <li>Loss of data or game progress</li>
+            <li>Indirect or consequential damages</li>
+            <li>Damages exceeding the amount you paid for the app (which is $0)</li>
+        </ul>
+        
+        <h3>8. In-App Purchases</h3>
+        <p>If we offer in-app purchases in the future:</p>
+        <ul>
+            <li>All purchases are final and non-refundable (subject to applicable law)</li>
+            <li>Refunds are handled through the App Store per Apple's policies</li>
+        </ul>
+        
+        <h3>9. Intellectual Property</h3>
+        <p>All content, trademarks, and intellectual property in RYDL are owned by us or our licensors. You may not copy, modify, or distribute any part of the app.</p>
+        
+        <h3>10. Changes to Terms</h3>
+        <p>We may modify these terms at any time. Continued use of the app after changes constitutes acceptance of the new terms.</p>
+        
+        <h3>11. Governing Law</h3>
+        <p>These terms are governed by the laws of the United States, without regard to conflict of law provisions.</p>
+        
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>If you have questions about these terms of service:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@rydl.app">support@RYDL.app</a></p>
+            <p><strong>In-App:</strong> Settings → Terms of Service</p>
+        </div>
+    </div>
+</body>
+</html>

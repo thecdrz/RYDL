@@ -72,32 +72,30 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 680px;
             width: 100%;
             margin: 0 auto;
-            padding: 60px 40px;
+            padding: 80px 30px;
             position: relative;
             z-index: 1;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
-
-
         .logo-container {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             position: relative;
         }
 
         .logo {
-            width: 240px;
-            height: 240px;
+            width: 160px;
+            height: 160px;
             margin: 0 auto;
             display: block;
-            border-radius: 20px;
+            border-radius: 24px;
             box-shadow: 0 12px 30px var(--shadow-soft), 0 4px 8px rgba(139, 115, 85, 0.08);
             animation: logoFloat 6s ease-in-out infinite;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -114,20 +112,20 @@
         }
 
         .tagline {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--soft-brown);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             font-weight: 500;
             text-shadow: 0 1px 2px rgba(139, 115, 85, 0.1);
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
         }
 
         .description {
             font-size: 1rem;
             color: var(--text-light);
-            max-width: 500px;
-            margin: 0 auto 40px;
-            line-height: 1.7;
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.65;
             letter-spacing: 0.1px;
         }
 
@@ -138,8 +136,8 @@
         .links-grid {
             display: flex;
             justify-content: center;
-            gap: 16px;
-            margin-bottom: 40px;
+            gap: 12px;
+            margin-bottom: 50px;
             flex-wrap: wrap;
         }
 
@@ -147,9 +145,9 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 16px 24px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 25px;
+            padding: 14px 22px;
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 20px;
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
@@ -160,7 +158,7 @@
             overflow: hidden;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-            box-shadow: 0 8px 25px rgba(139, 115, 85, 0.1);
+            box-shadow: 0 6px 20px rgba(139, 115, 85, 0.08);
         }
 
         .link-card::before {
@@ -306,59 +304,49 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
-                padding: 30px 15px;
-            }
-
-            .main-content {
-                padding: 20px 15px;
+                padding: 50px 25px;
             }
 
             .logo {
-                width: 180px;
-                height: 180px;
+                width: 140px;
+                height: 140px;
             }
 
             .tagline {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             .description {
-                font-size: 0.9rem;
+                font-size: 0.95rem;
             }
 
             .links-grid {
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
+                gap: 10px;
             }
 
             .link-card {
-                padding: 14px 20px;
+                padding: 12px 20px;
                 font-size: 0.9rem;
-                min-width: 140px;
-                justify-content: center;
             }
 
             .footer-links {
-                flex-direction: column;
-                gap: 12px;
-                align-items: center;
+                gap: 15px;
             }
 
             .footer-link {
                 font-size: 0.85rem;
-                padding: 6px 10px;
+                padding: 8px 14px;
             }
         }
 
         @media (max-width: 480px) {
             .logo {
-                width: 160px;
-                height: 160px;
+                width: 120px;
+                height: 120px;
             }
 
             .tagline {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
         }
 
@@ -388,14 +376,17 @@
 
         <div class="main-content">
             <div class="links-grid">
-                <a href="legal.html#privacy" class="link-card">
-                    <span class="link-icon">🔒</span>
-                    <span class="link-text">Privacy</span>
+                            <div class="links">
+                <a href="privacy.html" class="link-card">
+                    <div class="link-icon">🔒</div>
+                    <div class="link-title">Privacy</div>
+                    <div class="link-description">How we protect you</div>
                 </a>
                 
-                <a href="legal.html#terms" class="link-card">
-                    <span class="link-icon">📄</span>
-                    <span class="link-text">Terms</span>
+                <a href="terms.html" class="link-card">
+                    <div class="link-icon">�</div>
+                    <div class="link-title">Terms</div>
+                    <div class="link-description">Simple & fair</div>
                 </a>
                 
                 <a href="mailto:support@rydl.app" class="link-card">
