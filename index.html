@@ -84,27 +84,7 @@
             margin-bottom: 50px;
         }
 
-        .badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: linear-gradient(135deg, var(--cozy-orange) 0%, #c8763a 100%);
-            color: var(--warm-white);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            box-shadow: 0 4px 15px var(--shadow-warm);
-            animation: gentlePulse 3s ease-in-out infinite;
-        }
 
-        @keyframes gentlePulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-        }
 
         .logo-container {
             margin-bottom: 30px;
@@ -112,8 +92,8 @@
         }
 
         .logo {
-            width: 160px;
-            height: 160px;
+            width: 240px;
+            height: 240px;
             margin: 0 auto;
             display: block;
             border-radius: 20px;
@@ -143,11 +123,14 @@
 
         .main-content {
             background: var(--warm-white);
-            border-radius: 20px;
-            padding: 35px;
+            border-radius: 16px;
+            padding: 20px;
             box-shadow: 0 15px 40px var(--shadow-soft);
             border: 1px solid var(--border-soft);
             margin-bottom: 30px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .links-grid {
@@ -296,16 +279,9 @@
                 padding: 25px 20px;
             }
 
-            .badge {
-                position: static;
-                margin-bottom: 20px;
-                font-size: 0.75rem;
-                padding: 6px 12px;
-            }
-
             .logo {
-                width: 120px;
-                height: 120px;
+                width: 180px;
+                height: 180px;
             }
 
             .tagline {
@@ -341,17 +317,12 @@
 
         @media (max-width: 480px) {
             .logo {
-                width: 100px;
-                height: 100px;
+                width: 160px;
+                height: 160px;
             }
 
             .tagline {
                 font-size: 1rem;
-            }
-
-            .badge {
-                font-size: 0.7rem;
-                padding: 5px 10px;
             }
         }
 
@@ -367,10 +338,6 @@
 </head>
 <body>
     <div class="container">
-        <div class="badge">
-            🎮 Now Available on iOS
-        </div>
-        
         <div class="header">
             <div class="logo-container">
                 <img src="RYDL-Logo-Light.png" alt="RYDL Logo" class="logo">
@@ -379,7 +346,7 @@
             <p class="tagline">Calm logic wrapped in cozy vibes</p>
             <p class="description">
                 A relaxing number puzzle game where you decode secret combinations. 
-                Challenge friends, climb leaderboards, and build your winning streak in the most peaceful way possible.
+                Challenge friends, climb leaderboards, and build your winning streak!
             </p>
         </div>
 
@@ -415,7 +382,7 @@
             </div>
             
             <p class="contact">
-                Questions? Email <a href="mailto:support@rydl.app">support@rydl.app</a>
+                Questions? Email <a href="mailto:support@rydl.app">support@RYDL.app</a>
             </p>
         </div>
     </div>
