@@ -134,13 +134,13 @@
         }
 
         .links-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 14px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(180px, 1fr));
+            gap: 14px 18px;
             margin: 0 auto 60px;
-            flex-wrap: wrap;
-            max-width: 600px;
+            max-width: 560px;
+            align-items: center;
+            justify-items: center;
         }
 
         .link-card {
@@ -148,21 +148,23 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 16px 28px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 24px;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 20px;
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
             font-size: 0.95rem;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(232, 225, 213, 0.5);
+            transition: all 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+            border: 1px solid rgba(232, 225, 213, 0.6);
             position: relative;
             overflow: hidden;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 24px rgba(139, 115, 85, 0.12);
-            min-width: 140px;
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 30px rgba(139, 115, 85, 0.06);
+            width: 100%;
+            max-width: 320px;
+            box-sizing: border-box;
         }
 
         .link-card::before {
@@ -326,17 +328,17 @@
             }
 
             .links-grid {
-                flex-direction: column;
+                grid-template-columns: 1fr;
                 gap: 12px;
-                max-width: 100%;
-                padding: 0 10px;
+                max-width: 420px;
+                padding: 0 12px;
             }
 
             .link-card {
-                padding: 14px 24px;
-                font-size: 0.9rem;
+                padding: 14px 22px;
+                font-size: 0.95rem;
                 width: 100%;
-                max-width: 280px;
+                max-width: 420px;
             }
 
             .footer-links {
