@@ -135,10 +135,10 @@
 
         .links-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(180px, 1fr));
-            gap: 14px 18px;
+            grid-template-columns: repeat(2, minmax(150px, 1fr));
+            gap: 12px 14px;
             margin: 0 auto 60px;
-            max-width: 560px;
+            max-width: 460px;
             align-items: center;
             justify-items: center;
             justify-content: center;
@@ -164,12 +164,12 @@
             backdrop-filter: blur(8px);
             box-shadow: 0 10px 30px rgba(139, 115, 85, 0.06);
             width: 100%;
-            max-width: 320px;
+            max-width: 240px;
             box-sizing: border-box;
         }
 
         /* utility: make an item span both columns (used for the Discord CTA) */
-        .span-full { grid-column: 1 / -1; justify-self: center; max-width: 360px; }
+    .span-full { grid-column: 1 / -1; justify-self: center; max-width: 280px; }
 
         .link-card::before {
             content: '';
