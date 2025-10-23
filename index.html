@@ -130,35 +130,39 @@
         }
 
         .main-content {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
         .links-grid {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin-bottom: 50px;
+            align-items: center;
+            gap: 14px;
+            margin: 0 auto 60px;
             flex-wrap: wrap;
+            max-width: 600px;
         }
 
         .link-card {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 14px 22px;
-            background: rgba(255, 255, 255, 0.75);
-            border-radius: 20px;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 28px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 24px;
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
             font-size: 0.95rem;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: none;
+            border: 1px solid rgba(232, 225, 213, 0.5);
             position: relative;
             overflow: hidden;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-            box-shadow: 0 6px 20px rgba(139, 115, 85, 0.08);
+            box-shadow: 0 8px 24px rgba(139, 115, 85, 0.12);
+            min-width: 140px;
         }
 
         .link-card::before {
@@ -192,10 +196,11 @@
         }
 
         .link-icon {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             transition: all 0.3s ease;
             position: relative;
             z-index: 1;
+            line-height: 1;
         }
 
         .link-text {
@@ -204,12 +209,12 @@
             position: relative;
             z-index: 1;
             white-space: nowrap;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.3px;
         }
 
         .link-card.discord {
-            background: rgba(122, 148, 113, 0.9);
-            border-color: var(--gentle-green);
+            background: rgba(122, 148, 113, 0.95);
+            border: 1px solid rgba(122, 148, 113, 0.6);
         }
 
         .link-card.discord .link-icon,
@@ -321,12 +326,17 @@
             }
 
             .links-grid {
-                gap: 10px;
+                flex-direction: column;
+                gap: 12px;
+                max-width: 100%;
+                padding: 0 10px;
             }
 
             .link-card {
-                padding: 12px 20px;
+                padding: 14px 24px;
                 font-size: 0.9rem;
+                width: 100%;
+                max-width: 280px;
             }
 
             .footer-links {
