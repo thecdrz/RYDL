@@ -21,10 +21,9 @@
     <meta name="twitter:image" content="https://rydl.app/Logo.png">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Logo.png">
-    <link rel="apple-touch-icon" href="Logo.png">
-    
-    <!-- v3.0 - Ultra-thin borders for cleaner button design -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="app-icon-cream.png" id="favicon">
+    <link rel="apple-touch-icon" href="app-icon-cream.png" id="appleFavicon">    <!-- v3.0 - Ultra-thin borders for cleaner button design -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -168,6 +167,26 @@
             filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.2));
         }
 
+        .decorative-float-2 {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            width: 100px;
+            height: 100px;
+            opacity: 0.35;
+            border-radius: 50%;
+            animation: gentleFloat 25s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+            transition: opacity 0.6s ease;
+        }
+
+        body.teal-theme .decorative-float-2 {
+            opacity: 0.25;
+            filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.2));
+        }
+
         @media (max-width: 768px) {
             .theme-toggle {
                 top: 15px;
@@ -186,6 +205,18 @@
 
             body.teal-theme .decorative-float {
                 opacity: 0.2;
+            }
+
+            .decorative-float-2 {
+                width: 70px;
+                height: 70px;
+                top: 80px;
+                left: 15px;
+                opacity: 0.25;
+            }
+
+            body.teal-theme .decorative-float-2 {
+                opacity: 0.15;
             }
         }
 
@@ -527,6 +558,7 @@
     </button>
     
     <img src="ChatGPT Image Oct 26, 2025, 02_28_32 AM.png" alt="" class="decorative-float" aria-hidden="true">
+    <img src="ChatGPT Image Oct 26, 2025, 02_29_55 AM.png" alt="" class="decorative-float-2" aria-hidden="true">
     
     <div class="container">
         <div class="header">
@@ -583,15 +615,21 @@
         // Theme toggle functionality
         function toggleTheme() {
             const body = document.body;
+            const favicon = document.getElementById('favicon');
+            const appleFavicon = document.getElementById('appleFavicon');
             const isTeal = body.classList.contains('teal-theme');
             
             if (isTeal) {
                 // Switch to cozy/light theme
                 body.classList.remove('teal-theme');
+                favicon.href = 'app-icon-cream.png';
+                appleFavicon.href = 'app-icon-cream.png';
                 localStorage.setItem('theme', 'light');
             } else {
                 // Switch to teal theme
                 body.classList.add('teal-theme');
+                favicon.href = 'app-icon-teal.png';
+                appleFavicon.href = 'app-icon-teal.png';
                 localStorage.setItem('theme', 'teal');
             }
         }
@@ -599,9 +637,13 @@
         // Load saved theme on page load
         document.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('theme');
+            const favicon = document.getElementById('favicon');
+            const appleFavicon = document.getElementById('appleFavicon');
             
             if (savedTheme === 'teal') {
                 document.body.classList.add('teal-theme');
+                favicon.href = 'app-icon-teal.png';
+                appleFavicon.href = 'app-icon-teal.png';
             }
         });
     </script>
