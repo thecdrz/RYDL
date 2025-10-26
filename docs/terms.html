@@ -10,206 +10,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --warm-cream: #faf7f0;
-            --soft-brown: #8b7355;
-            --cozy-orange: #d4853d;
-            --text-dark: #2c2c2c;
-            --text-light: #666666;
-        }
-
-        body.teal-theme {
-            --warm-cream: #5a8989;
-            --soft-brown: #f0a868;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--warm-cream);
-            min-height: 100vh;
-            color: var(--text-dark);
-            transition: background 0.3s ease;
-        }
-
-        body.teal-theme {
-            color: white;
-        }
-
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            color: var(--text-dark);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.2s ease;
-            z-index: 100;
-        }
-
-        .theme-toggle:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 30px;
-        }
-
-        .back-link {
-            display: inline-block;
-            color: var(--soft-brown);
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 40px;
-            font-size: 0.95rem;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .logo {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 20px;
-            display: block;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 5rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        body.teal-theme h1 {
-            color: white;
-        }
-
-        .tagline {
-            color: var(--text-light);
-            font-size: 1rem;
-        }
-
-        body.teal-theme .tagline {
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        .content {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-
-        body.teal-theme .content {
-            background: rgba(255, 255, 255, 0.95);
-        }
-
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        h2:first-child {
-            margin-top: 0;
-        }
-
-        p, li {
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            margin-left: 25px;
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        strong {
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-
-        .last-updated {
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-top: 40px;
-        }
-
-        body.teal-theme .last-updated {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        @media (max-width: 768px) {
-            .theme-toggle {
-                top: 15px;
-                right: 15px;
-                padding: 8px 14px;
-                font-size: 0.8rem;
-            }
-
-            .container {
-                padding: 40px 20px;
-            }
-
-            .content {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 4rem;
-            }
-
-            .logo {
-                width: 160px;
-                height: 160px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary Navigation">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
     <button class="theme-toggle" onclick="toggleTheme()">🎨 Switch Theme</button>
 
     <div class="container">
         <a href="index.html" class="back-link">← Back to RYDL</a>
 
         <div class="header">
-            <img src="Terms-Logo.png" alt="RYDL Terms" class="logo">
+            <img src="Terms-Logo.png" alt="RYDL Terms" class="logo logo-md">
             <h1>Terms of Service</h1>
             <p class="tagline">Please read these terms carefully</p>
         </div>
 
-        <div class="content">
+        <div class="card content">
             <h2>Acceptance of Terms</h2>
             <p>By downloading, installing, or using RYDL, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the app.</p>
 
@@ -252,43 +76,12 @@
             <p>These Terms of Service are governed by and construed in accordance with applicable laws, without regard to conflict of law principles.</p>
 
             <h2>Contact Us</h2>
-            <p>If you have any questions about these Terms of Service, please contact us at <a href="mailto:legal@rydl.app" style="color: var(--cozy-orange); text-decoration: none;">legal@rydl.app</a></p>
+            <p>If you have any questions about these Terms of Service, please contact us at <a href="mailto:legal@rydl.app" class="contact-email">legal@rydl.app</a></p>
 
             <p class="last-updated">Last updated: October 26, 2025</p>
         </div>
     </div>
 
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const favicon = document.getElementById('favicon');
-            const appleFavicon = document.getElementById('appleFavicon');
-            
-            body.classList.toggle('teal-theme');
-            const isTeal = body.classList.contains('teal-theme');
-            
-            if (isTeal) {
-                favicon.href = 'app-icon-teal.png';
-                appleFavicon.href = 'app-icon-teal.png';
-                localStorage.setItem('theme', 'teal');
-            } else {
-                favicon.href = 'app-icon-cream.png';
-                appleFavicon.href = 'app-icon-cream.png';
-                localStorage.setItem('theme', 'light');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('theme');
-            const favicon = document.getElementById('favicon');
-            const appleFavicon = document.getElementById('appleFavicon');
-            
-            if (savedTheme === 'teal') {
-                document.body.classList.add('teal-theme');
-                favicon.href = 'app-icon-teal.png';
-                appleFavicon.href = 'app-icon-teal.png';
-            }
-        });
-    </script>
+    
 </body>
 </html>
