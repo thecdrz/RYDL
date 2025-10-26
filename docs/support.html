@@ -482,7 +482,7 @@
         </a>
         
         <div class="header">
-            <img src="RYDL-Logo-Light.png" alt="RYDL Logo" class="logo" id="logoImg">
+                    <img src="Privacy-Logo.png" alt="RYDL Logo" class="logo" id="logo">
             <h1>RYDL Support</h1>
             <p class="tagline">Calm logic wrapped in cozy vibes</p>
         </div>
@@ -745,18 +745,17 @@
     <script>
         function toggleTheme() {
             const body = document.body;
-            const logoImg = document.getElementById('logoImg');
+            const toggle = document.querySelector('.theme-toggle');
+            
+            body.classList.toggle('teal-theme');
             const isTeal = body.classList.contains('teal-theme');
             
-            if (isTeal) {
-                body.classList.remove('teal-theme');
-                logoImg.src = 'RYDL-Logo-Light.png';
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.classList.add('teal-theme');
-                logoImg.src = 'RYDL-Logo-Teal.png';
-                localStorage.setItem('theme', 'teal');
-            }
+            // Update toggle text
+            toggle.textContent = isTeal ? '☀️' : '🦊';
+            toggle.setAttribute('aria-label', isTeal ? 'Switch to light theme' : 'Switch to teal theme');
+            
+            // Save preference
+            localStorage.setItem('theme', isTeal ? 'teal' : 'light');
         }
         
         document.addEventListener('DOMContentLoaded', function() {

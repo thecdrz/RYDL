@@ -11,18 +11,18 @@
     <meta property="og:url" content="https://rydl.app/">
     <meta property="og:title" content="RYDL - Calm Logic Wrapped in Cozy Vibes">
     <meta property="og:description" content="A relaxing number puzzle game where you decode secret combinations. Challenge friends, climb leaderboards, and build your winning streak!">
-    <meta property="og:image" content="https://rydl.app/RYDL-Logo-Light.png">
+    <meta property="og:image" content="https://rydl.app/Privacy-Logo.png">
     
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://rydl.app/">
     <meta name="twitter:title" content="RYDL - Calm Logic Wrapped in Cozy Vibes">
     <meta name="twitter:description" content="A relaxing number puzzle game where you decode secret combinations. Challenge friends, climb leaderboards, and build your winning streak!">
-    <meta name="twitter:image" content="https://rydl.app/RYDL-Logo-Light.png">
+    <meta name="twitter:image" content="https://rydl.app/Privacy-Logo.png">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="RYDL-Logo-Light.png">
-    <link rel="apple-touch-icon" href="RYDL-Logo-Light.png">
+    <link rel="icon" type="image/png" href="Privacy-Logo.png">
+    <link rel="apple-touch-icon" href="Privacy-Logo.png">
     
     <!-- v3.0 - Ultra-thin borders for cleaner button design -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -497,7 +497,7 @@
     <div class="container">
         <div class="header">
             <div class="logo-container">
-                <img src="RYDL-Logo-Light.png" alt="RYDL Logo" class="logo" id="logoImg">
+                <img src="Privacy-Logo.png" alt="RYDL Logo" class="logo" id="logoImg">
             </div>
             
             <p class="tagline">Calm logic wrapped in cozy vibes</p>
@@ -549,18 +549,15 @@
         // Theme toggle functionality
         function toggleTheme() {
             const body = document.body;
-            const logoImg = document.getElementById('logoImg');
             const isTeal = body.classList.contains('teal-theme');
             
             if (isTeal) {
                 // Switch to cozy/light theme
                 body.classList.remove('teal-theme');
-                logoImg.src = 'RYDL-Logo-Light.png';
                 localStorage.setItem('theme', 'light');
             } else {
                 // Switch to teal theme
                 body.classList.add('teal-theme');
-                logoImg.src = 'RYDL-Logo-Teal.png';
                 localStorage.setItem('theme', 'teal');
             }
         }
@@ -568,11 +565,9 @@
         // Load saved theme on page load
         document.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('theme');
-            const logoImg = document.getElementById('logoImg');
             
             if (savedTheme === 'teal') {
                 document.body.classList.add('teal-theme');
-                logoImg.src = 'RYDL-Logo-Teal.png';
             }
         });
     </script>
