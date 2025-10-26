@@ -23,15 +23,15 @@
         }
 
         body.teal-theme {
-            --warm-cream: #5a8f8f;
-            --bg-gradient-start: #5a8f8f;
-            --bg-gradient-end: #4a7a7a;
+            --warm-cream: #5a8989;
+            --bg-gradient-start: #5a8989;
+            --bg-gradient-end: #5a8989;
             --soft-brown: #f0a868;
             --deep-brown: #d4853d;
             --text-dark: #2c2c2c;
-            --text-light: #555555;
-            --border-soft: #477373;
-            --shadow-soft: rgba(74, 122, 122, 0.25);
+            --text-light: rgba(255, 255, 255, 0.85);
+            --border-soft: #4a7575;
+            --shadow-soft: rgba(90, 137, 137, 0.25);
         }
 
         * {
@@ -107,12 +107,17 @@
         }
         
         .logo {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             margin: 0 auto 25px;
             display: block;
             border-radius: 20px;
             box-shadow: 0 8px 20px var(--shadow-soft);
+            filter: drop-shadow(0 8px 16px rgba(139, 115, 85, 0.12));
+        }
+
+        body.teal-theme .logo {
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
         }
         
         h1 {
