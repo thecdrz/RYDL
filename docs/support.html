@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RYDL - Support & Help</title>
+    <title>RYDL - Support</title>
+    <link rel="icon" type="image/png" href="app-icon-cream.png" id="favicon">
+    <link rel="apple-touch-icon" href="app-icon-cream.png" id="appleFavicon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,27 +13,14 @@
         :root {
             --warm-cream: #faf7f0;
             --soft-brown: #8b7355;
-            --deep-brown: #5d4e37;
             --cozy-orange: #d4853d;
-            --gentle-green: #7a9471;
-            --warm-white: #ffffff;
             --text-dark: #2c2c2c;
             --text-light: #666666;
-            --border-soft: #e8e1d5;
-            --shadow-soft: rgba(139, 115, 85, 0.15);
-            --shadow-warm: rgba(212, 133, 61, 0.2);
         }
 
         body.teal-theme {
             --warm-cream: #5a8989;
-            --bg-gradient-start: #5a8989;
-            --bg-gradient-end: #5a8989;
             --soft-brown: #f0a868;
-            --deep-brown: #d4853d;
-            --text-dark: #2c2c2c;
-            --text-light: rgba(255, 255, 255, 0.85);
-            --border-soft: #4a7575;
-            --shadow-soft: rgba(90, 137, 137, 0.25);
         }
 
         * {
@@ -39,732 +28,259 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, var(--warm-cream) 0%, #f5f0e8 100%);
+            background: var(--warm-cream);
             min-height: 100vh;
             color: var(--text-dark);
-            line-height: 1.6;
-            position: relative;
-            overflow-x: hidden;
-            transition: background 0.6s ease;
-            opacity: 0;
-            animation: fadeIn 0.6s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to { opacity: 1; }
+            transition: background 0.3s ease;
         }
 
         body.teal-theme {
-            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
-        }
-
-        body::before {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(212, 133, 61, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            top: -200px;
-            right: -200px;
-            animation: gentleFloat 25s ease-in-out infinite;
-            transition: background 0.6s ease;
-        }
-        
-        body::after {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(122, 148, 113, 0.06) 0%, transparent 70%);
-            border-radius: 50%;
-            bottom: -150px;
-            left: -150px;
-            animation: gentleFloat 20s ease-in-out infinite reverse;
-            transition: background 0.6s ease;
-        }
-
-        body.teal-theme::before {
-            background: radial-gradient(circle, rgba(74, 122, 122, 0.12) 0%, transparent 70%);
-        }
-
-        body.teal-theme::after {
-            background: radial-gradient(circle, rgba(90, 137, 137, 0.08) 0%, transparent 70%);
-        }
-        
-        @keyframes gentleFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(20px, -15px) scale(1.05); }
-            66% { transform: translate(-15px, 20px) scale(0.95); }
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 80px 40px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 70px;
-        }
-        
-        .logo {
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 30px;
-            display: block;
-            filter: drop-shadow(0 8px 16px rgba(139, 115, 85, 0.12));
-            animation: logoFloat 6s ease-in-out infinite;
-        }
-
-        @keyframes logoFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-
-        body.teal-theme .logo {
-            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
-        }
-        
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--deep-brown);
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-            font-weight: 600;
-        }
-        
-        .tagline {
-            color: var(--text-light);
-            font-size: 0.875rem;
-            margin-top: 8px;
-        }
-        
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--text-dark);
-            margin-top: 50px;
-            margin-bottom: 28px;
-            font-weight: 700;
-            letter-spacing: -0.3px;
-        }
-
-        body.teal-theme h2 {
-            color: var(--warm-cream);
-        }
-        
-        h3 {
-            font-size: 1.25rem;
-            color: var(--text-dark);
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        body.teal-theme h3 {
-            color: var(--warm-cream);
-        }
-        
-        p, li {
-            margin-bottom: 12px;
-            color: var(--text-light);
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-        
-        ul {
-            margin-left: 25px;
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        strong {
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-        
-        .contact-box {
-            background: linear-gradient(135deg, rgba(250, 247, 240, 0.6) 0%, rgba(248, 244, 237, 0.6) 100%);
-            padding: 35px;
-            border-radius: 20px;
-            margin: 30px 0;
-            border: 1px solid rgba(232, 225, 213, 0.6);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-box:hover {
-            background: linear-gradient(135deg, rgba(250, 247, 240, 0.8) 0%, rgba(248, 244, 237, 0.8) 100%);
-            box-shadow: 0 8px 24px var(--shadow-soft);
-        }
-        
-        .contact-box h3 {
-            margin-top: 0;
-            color: var(--soft-brown);
-            font-size: 1.3rem;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .contact-icon {
-            font-size: 1.5em;
-        }
-        
-        a {
-            color: var(--cozy-orange);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--deep-brown);
-            text-decoration: underline;
-        }
-        
-                .faq-item {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 28px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-            border: 1px solid var(--border-soft);
-            transition: all 0.3s ease;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-        }
-        
-        .faq-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            border-color: var(--cozy-orange);
-        }
-
-        body.teal-theme .faq-item {
-            background: rgba(255, 255, 255, 0.9);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        body.teal-theme .faq-item:hover {
-            border-color: var(--soft-brown);
-        }
-        
-        .faq-question {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--deep-brown);
-            margin-bottom: 10px;
-        }
-        
-        .faq-answer {
-            color: var(--text-light);
-            line-height: 1.7;
-            font-size: 0.975rem;
-        }
-        
-        .quick-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin: 50px 0;
-        }
-        
-        .quick-link {
-            background: rgba(255, 255, 255, 0.85);
-            color: var(--text-dark);
-            padding: 24px;
-            border-radius: 20px;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-            border: 1px solid var(--border-soft);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-        }
-        
-        .quick-link:hover {
-            background: rgba(255, 255, 255, 0.95);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-            text-decoration: none;
-            border-color: var(--cozy-orange);
-        }
-
-        body.teal-theme .quick-link {
-            background: rgba(255, 255, 255, 0.9);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        body.teal-theme .quick-link:hover {
-            background: rgba(255, 255, 255, 0.98);
-            border-color: var(--cozy-orange);
-        }        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .feature-card {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 28px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-            border: 1px solid var(--border-soft);
-            transition: all 0.3s ease;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-            border-color: var(--cozy-orange);
-        }
-
-        body.teal-theme .feature-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        body.teal-theme .feature-card:hover {
-            border-color: var(--soft-brown);
-        }        body.teal-theme .feature-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        body.teal-theme .feature-card:hover {
-            border-color: var(--soft-brown);
-        }        .feature-icon {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .feature-title {
-            font-weight: 600;
-            font-size: 1.15rem;
-            color: var(--deep-brown);
-            margin-bottom: 10px;
-        }
-        
-        .feature-desc {
-            color: var(--text-light);
-            font-size: 0.95em;
-        }
-
-        .page-footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid var(--border-soft);
-        }
-
-        .footer-text {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .footer-subtext {
-            color: var(--text-light);
-            font-size: 0.85rem;
-            margin-top: 10px;
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--soft-brown);
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 35px;
-            padding: 10px 18px;
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid var(--border-soft);
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .back-link:hover {
-            background: var(--warm-white);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px var(--shadow-soft);
-            text-decoration: none;
-            color: var(--cozy-orange);
+            color: white;
         }
 
         .theme-toggle {
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-soft);
+            background: white;
+            border: none;
+            padding: 10px 18px;
             border-radius: 12px;
-            padding: 10px 16px;
             cursor: pointer;
+            font-weight: 600;
             font-size: 0.85rem;
-            font-weight: 500;
             color: var(--text-dark);
-            box-shadow: 0 4px 12px var(--shadow-soft);
-            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            z-index: 100;
         }
 
         .theme-toggle:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px var(--shadow-soft);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--soft-brown);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        body.teal-theme h1 {
+            color: white;
+        }
+
+        .tagline {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        body.teal-theme .tagline {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        body.teal-theme h2 {
+            color: white;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        body.teal-theme .faq-item {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        body.teal-theme .contact-box {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .contact-email {
+            color: var(--cozy-orange);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 40px 30px;
-                margin: 30px 20px;
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+                padding: 8px 14px;
+                font-size: 0.8rem;
             }
-            
+
+            .container {
+                padding: 40px 20px;
+            }
+
             h1 {
                 font-size: 2rem;
             }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            h3 {
-                font-size: 1.1rem;
-            }
-            
-            .quick-links {
-                grid-template-columns: 1fr;
-            }
 
             .logo {
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
             }
         }
     </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle between light and teal theme">🎨 Switch Theme</button>
-    
+    <button class="theme-toggle" onclick="toggleTheme()">🎨 Switch Theme</button>
+
     <div class="container">
-        <a href="./" class="back-link">
-            <span>←</span> Back to RYDL
-        </a>
-        
+        <a href="index.html" class="back-link">← Back to RYDL</a>
+
         <div class="header">
-                    <img src="Support.png" alt="RYDL Logo" class="logo" id="logo">
-            <h1>RYDL Support</h1>
-            <p class="tagline">Calm logic wrapped in cozy vibes</p>
+            <img src="Support.png" alt="RYDL Support" class="logo">
+            <h1>Support</h1>
+            <p class="tagline">We're here to help</p>
         </div>
 
-        <!-- Quick Links -->
-        <div class="quick-links">
-            <a href="#faq" class="quick-link">📖 FAQ</a>
-            <a href="#contact" class="quick-link">💬 Contact Us</a>
-            <a href="#gameplay" class="quick-link">🎮 How to Play</a>
-            <a href="https://RYDL.app/privacy.html" class="quick-link">🔒 Privacy</a>
+        <div class="section">
+            <h2>How to Play</h2>
+            <div class="faq-item">
+                <h3>🎯 Your Goal</h3>
+                <p>Decode the secret 4-digit combination using logic and deduction. Each guess gives you clues to help narrow down the answer!</p>
+            </div>
+            <div class="faq-item">
+                <h3>🎮 Game Modes</h3>
+                <p>Choose from Classic, Competitive, or Daily Challenge modes. Compete on leaderboards and build your win streak!</p>
+            </div>
         </div>
 
-        <!-- How to Play -->
-        <section id="gameplay">
-            <h2>🎮 How to Play RYDL</h2>
-            
-            <h3>Basic Rules</h3>
-            <p>RYDL is a number puzzle game where you crack a 5-digit code in 6 tries or less.</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🟢</div>
-                    <div class="feature-title">Green</div>
-                    <div class="feature-desc">Right digit in the right spot</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🟡</div>
-                    <div class="feature-title">Yellow</div>
-                    <div class="feature-desc">Right digit in the wrong spot</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚫</div>
-                    <div class="feature-title">Gray</div>
-                    <div class="feature-desc">Not in the code at all</div>
-                </div>
-            </div>
-
-            <h3>Game Modes</h3>
-            <ul>
-                <li><strong>Classic</strong> - Take your time, 6 guesses to crack the code</li>
-                <li><strong>Speed</strong> - Race against the clock (2 minutes!)</li>
-                <li><strong>Hard</strong> - No yellow hints, only green or gray</li>
-                <li><strong>Unique</strong> - All digits are different, no repeats</li>
-                <li><strong>Practice</strong> - Unlimited guesses to master your skills</li>
-            </ul>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq">
-            <h2>❓ Frequently Asked Questions</h2>
-
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
-                <div class="faq-question">How do I play with friends?</div>
-                <div class="faq-answer">
-                    Go to the Multiplayer tab, add friends by username, then challenge them to custom puzzles! You can also share your results after completing a game.
-                </div>
+                <h3>How do I start a game?</h3>
+                <p>Simply open the app and tap "Play" to begin your puzzle-solving journey!</p>
             </div>
-
             <div class="faq-item">
-                <div class="faq-question">How do daily challenges work?</div>
-                <div class="faq-answer">
-                    Every day you get 3 new challenges with specific goals (like "complete in under 2 minutes" or "solve in 3 tries"). Complete them to earn bonus points!
-                </div>
+                <h3>Can I play with friends?</h3>
+                <p>Yes! Challenge your friends through the competitive mode and see who can solve puzzles faster.</p>
             </div>
-
             <div class="faq-item">
-                <div class="faq-question">Can I change the theme?</div>
-                <div class="faq-answer">
-                    Yes! Go to Settings → Themes and choose from 8 beautiful themes including Neon, Sunset, Ocean, Forest, Retro, Pastel, and Cyberpunk. Dark mode is also available!
-                </div>
+                <h3>Is RYDL free?</h3>
+                <p>RYDL is free to download and play with optional premium features.</p>
             </div>
-
             <div class="faq-item">
-                <div class="faq-question">Does RYDL work offline?</div>
-                <div class="faq-answer">
-                    Yes! All solo game modes work completely offline. You only need internet for multiplayer features like leaderboards and friend challenges.
-                </div>
+                <h3>How do the clues work?</h3>
+                <p>After each guess, you'll receive feedback that helps you narrow down the correct combination. Use logic and strategy to solve it in fewer moves!</p>
             </div>
+        </div>
 
-            <div class="faq-item">
-                <div class="faq-question">Are there any ads or subscriptions?</div>
-                <div class="faq-answer">
-                    No! RYDL is completely free with zero ads and no subscriptions. All features are unlocked from the start. We respect your time and attention.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How do I turn off sounds or haptics?</div>
-                <div class="faq-answer">
-                    Open the Settings screen (tap the gear icon) and toggle Sound Effects, Ambient Music, or Haptics on/off as you prefer.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How are achievements unlocked?</div>
-                <div class="faq-answer">
-                    Play games to unlock 20+ achievements! Check your progress in the Stats screen. Achievements range from common (first win) to legendary (perfect game in 1 guess).
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">Can I reset my statistics?</div>
-                <div class="faq-answer">
-                    Yes, go to Settings → Reset Statistics. This will clear your game history, streaks, and stats. This action cannot be undone!
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">How do I add friends?</div>
-                <div class="faq-answer">
-                    Go to the Leaderboard screen → Friends tab → Add Friend. Search for their username and send a friend request. They'll receive a notification.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">What data does RYDL collect?</div>
-                <div class="faq-answer">
-                    Very minimal! We only collect your username, game statistics, and friend connections (stored via Firebase). No personal information, no tracking, no ads. See our <a href="https://RYDL.app/privacy.html">Privacy Policy</a> for details.
-                </div>
-            </div>
-        </section>
-
-        <!-- Troubleshooting -->
-        <section>
-            <h2>🔧 Troubleshooting</h2>
-
-            <h3>App is crashing or freezing</h3>
-            <ul>
-                <li>Make sure you have the latest version of RYDL from the App Store</li>
-                <li>Restart your iPhone/iPad</li>
-                <li>Check that you have iOS 13.0 or later</li>
-                <li>If the problem persists, contact us at <a href="mailto:support@RYDL.app">support@RYDL.app</a></li>
-            </ul>
-
-            <h3>Friend challenges not working</h3>
-            <ul>
-                <li>Check your internet connection</li>
-                <li>Make sure both you and your friend have the latest app version</li>
-                <li>Try refreshing the Multiplayer screen (pull down to refresh)</li>
-                <li>Restart the app</li>
-            </ul>
-
-            <h3>Can't see my stats or progress</h3>
-            <ul>
-                <li>Your stats are saved locally on your device</li>
-                <li>If you reinstalled the app, stats may have been reset</li>
-                <li>Make sure you didn't accidentally tap "Reset Statistics" in Settings</li>
-            </ul>
-
-            <h3>Themes not applying</h3>
-            <ul>
-                <li>Close and reopen the app</li>
-                <li>Make sure you tapped "Apply" after selecting a theme</li>
-                <li>Check that you're running the latest version</li>
-            </ul>
-        </section>
-
-        <!-- Features -->
-        <section>
-            <h2>✨ Features Overview</h2>
-            <ul>
-                <li>5 game modes: Classic, Speed, Hard, Unique, Practice</li>
-                <li>Friend challenges and multiplayer</li>
-                <li>Global and friends leaderboards</li>
-                <li>3 daily challenges with bonus points</li>
-                <li>8 beautiful themes + dark mode</li>
-                <li>20+ achievements to unlock</li>
-                <li>Detailed statistics and game history</li>
-                <li>Ambient music and satisfying haptics</li>
-                <li>100% offline play for solo modes</li>
-                <li>Zero ads, forever</li>
-            </ul>
-        </section>
-
-        <!-- Tips & Tricks -->
-        <section>
-            <h2>💡 Tips & Tricks</h2>
-            
-            <h3>Strategy Tips</h3>
-            <ul>
-                <li>Start with a guess that has different digits (like 12345) to get maximum information</li>
-                <li>Pay attention to yellow circles - that digit IS in the code, just in a different spot</li>
-                <li>Use the process of elimination - gray digits are not in the code at all</li>
-                <li>In Unique mode, no digit repeats, so use this to your advantage</li>
-                <li>In Hard mode, there are no yellow hints - only green or gray!</li>
-            </ul>
-
-            <h3>Maximize Your Score</h3>
-            <ul>
-                <li>Win in fewer guesses to earn more points</li>
-                <li>Complete daily challenges for bonus points</li>
-                <li>Build a win streak for achievement unlocks</li>
-                <li>Try Speed mode for an adrenaline rush!</li>
-            </ul>
-
-            <h3>Social Features</h3>
-            <ul>
-                <li>Challenge friends to beat your time after completing a puzzle</li>
-                <li>Share your results to social media after a win</li>
-                <li>Check the leaderboard to see where you rank</li>
-                <li>Use the "Invite Friends" button to grow your friend list</li>
-            </ul>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact">
-            <h2>💬 Contact Us</h2>
-            
+        <div class="section">
+            <h2>Contact Us</h2>
             <div class="contact-box">
-                <h3>Need Help? We're Here!</h3>
-                <p>We typically respond within 24 hours. The more details you provide, the faster we can help!</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <span><strong>Email:</strong> <a href="mailto:support@RYDL.app">support@RYDL.app</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🌐</span>
-                        <span><strong>Website:</strong> <a href="https://RYDL.app/">RYDL.app</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">💬</span>
-                        <span><strong>Discord:</strong> <a href="https://discord.gg/Y3QrCCMW" target="_blank" rel="noopener noreferrer">Join our community</a></span>
-                    </div>
-                </div>
+                <p style="margin-bottom: 15px;">Have questions or feedback? We'd love to hear from you!</p>
+                <a href="mailto:support@rydl.app" class="contact-email">support@rydl.app</a>
             </div>
-
-            <h3>When contacting support, please include:</h3>
-            <ul>
-                <li>Your device model (iPhone 14, iPad Pro, etc.)</li>
-                <li>iOS version (Settings → General → About)</li>
-                <li>RYDL version (Settings → About RYDL)</li>
-                <li>A description of the issue and when it happens</li>
-                <li>Screenshots if applicable</li>
-            </ul>
-        </section>
-
-        <!-- Legal -->
-        <section>
-            <h2>📄 Legal & Privacy</h2>
-            <ul>
-                <li><a href="https://RYDL.app/privacy.html">Privacy Policy</a> - How we protect your data</li>
-                <li><a href="https://RYDL.app/terms.html">Terms of Service</a> - App usage guidelines</li>
-            </ul>
-        </section>
-
-        <!-- Footer -->
-        <div class="page-footer">
-            <p class="footer-text">
-                <strong>RYDL</strong> - Calm logic wrapped in cozy vibes<br>
-                Version 1.0.0 | © 2025 RYDL
-            </p>
-            <p class="footer-subtext">
-                Made with ❤️ for puzzle lovers everywhere
-            </p>
         </div>
     </div>
-    
+
     <script>
         function toggleTheme() {
             const body = document.body;
-            const toggle = document.querySelector('.theme-toggle');
+            const favicon = document.getElementById('favicon');
+            const appleFavicon = document.getElementById('appleFavicon');
             
             body.classList.toggle('teal-theme');
             const isTeal = body.classList.contains('teal-theme');
             
-            // Update toggle text
-            toggle.textContent = isTeal ? '☀️' : '🦊';
-            toggle.setAttribute('aria-label', isTeal ? 'Switch to light theme' : 'Switch to teal theme');
-            
-            // Save preference
-            localStorage.setItem('theme', isTeal ? 'teal' : 'light');
+            if (isTeal) {
+                favicon.href = 'app-icon-teal.png';
+                appleFavicon.href = 'app-icon-teal.png';
+                localStorage.setItem('theme', 'teal');
+            } else {
+                favicon.href = 'app-icon-cream.png';
+                appleFavicon.href = 'app-icon-cream.png';
+                localStorage.setItem('theme', 'light');
+            }
         }
-        
+
         document.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('theme');
-            const logoImg = document.getElementById('logoImg');
+            const favicon = document.getElementById('favicon');
+            const appleFavicon = document.getElementById('appleFavicon');
             
             if (savedTheme === 'teal') {
                 document.body.classList.add('teal-theme');
-                logoImg.src = 'RYDL-Logo-Teal.png';
+                favicon.href = 'app-icon-teal.png';
+                appleFavicon.href = 'app-icon-teal.png';
             }
         });
     </script>

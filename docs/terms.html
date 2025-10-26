@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RYDL - Terms of Service</title>
-    <link rel="icon" type="image/png" href="Terms-Logo.png">
-    <link rel="apple-touch-icon" href="Terms-Logo.png">
+    <link rel="icon" type="image/png" href="app-icon-cream.png" id="favicon">
+    <link rel="apple-touch-icon" href="app-icon-cream.png" id="appleFavicon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,27 +13,14 @@
         :root {
             --warm-cream: #faf7f0;
             --soft-brown: #8b7355;
-            --deep-brown: #5d4e37;
             --cozy-orange: #d4853d;
-            --gentle-green: #7a9471;
-            --warm-white: #ffffff;
             --text-dark: #2c2c2c;
             --text-light: #666666;
-            --border-soft: #e8e1d5;
-            --shadow-soft: rgba(139, 115, 85, 0.15);
-            --shadow-warm: rgba(212, 133, 61, 0.2);
         }
 
         body.teal-theme {
             --warm-cream: #5a8989;
-            --bg-gradient-start: #5a8989;
-            --bg-gradient-end: #5a8989;
             --soft-brown: #f0a868;
-            --deep-brown: #d4853d;
-            --text-dark: #2c2c2c;
-            --text-light: rgba(255, 255, 255, 0.85);
-            --border-soft: #4a7575;
-            --shadow-soft: rgba(90, 137, 137, 0.25);
         }
 
         * {
@@ -41,141 +28,122 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, var(--warm-cream) 0%, #f5f0e8 100%);
+            background: var(--warm-cream);
             min-height: 100vh;
             color: var(--text-dark);
-            line-height: 1.6;
-            position: relative;
-            overflow-x: hidden;
-            transition: background 0.6s ease;
-            opacity: 0;
-            animation: fadeIn 0.6s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to { opacity: 1; }
+            transition: background 0.3s ease;
         }
 
         body.teal-theme {
-            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            color: white;
         }
 
-        body::before {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(212, 133, 61, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            top: -200px;
-            right: -200px;
-            animation: gentleFloat 25s ease-in-out infinite;
-            transition: background 0.6s ease;
-        }
-        
-        body::after {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(122, 148, 113, 0.06) 0%, transparent 70%);
-            border-radius: 50%;
-            bottom: -150px;
-            left: -150px;
-            animation: gentleFloat 20s ease-in-out infinite reverse;
-            transition: background 0.6s ease;
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            z-index: 100;
         }
 
-        body.teal-theme::before {
-            background: radial-gradient(circle, rgba(74, 122, 122, 0.12) 0%, transparent 70%);
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
-        body.teal-theme::after {
-            background: radial-gradient(circle, rgba(90, 137, 137, 0.08) 0%, transparent 70%);
-        }
-        
-        @keyframes gentleFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(20px, -15px) scale(1.05); }
-            66% { transform: translate(-15px, 20px) scale(0.95); }
-        }
-        
         .container {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 80px 60px;
-            position: relative;
-            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 30px;
         }
-        
+
+        .back-link {
+            display: inline-block;
+            color: var(--soft-brown);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 40px;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
         .header {
             text-align: center;
             margin-bottom: 60px;
         }
-        
+
         .logo {
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 30px;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
             display: block;
-            filter: drop-shadow(0 8px 16px rgba(139, 115, 85, 0.12));
-            animation: logoFloat 6s ease-in-out infinite;
         }
 
-        @keyframes logoFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-
-        body.teal-theme .logo {
-            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
-        }
-        
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            color: var(--deep-brown);
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-            font-weight: 600;
-        }
-        
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.75rem;
-            color: var(--soft-brown);
-            margin-top: 45px;
-            margin-bottom: 18px;
-            padding-bottom: 0;
-            font-weight: 600;
-        }
-        
-        h3 {
-            font-size: 1.25rem;
-            color: var(--soft-brown);
-            margin-top: 35px;
             margin-bottom: 15px;
             font-weight: 600;
         }
 
-        h4 {
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: 600;
+        body.teal-theme h1 {
+            color: white;
         }
-        
-        p, li {
-            margin-bottom: 12px;
+
+        .tagline {
             color: var(--text-light);
             font-size: 1rem;
-            line-height: 1.7;
         }
-        
+
+        body.teal-theme .tagline {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        body.teal-theme .content {
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p, li {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
         ul {
             margin-left: 25px;
             margin-bottom: 20px;
@@ -190,211 +158,134 @@
             font-weight: 600;
         }
 
-        a {
-            color: var(--cozy-orange);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--deep-brown);
-            text-decoration: underline;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--soft-brown);
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 35px;
-            padding: 10px 18px;
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid var(--border-soft);
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .back-link:hover {
-            background: var(--warm-white);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px var(--shadow-soft);
-            text-decoration: none;
-            color: var(--cozy-orange);
-        }
-
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-soft);
-            border-radius: 12px;
-            padding: 10px 16px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-dark);
-            box-shadow: 0 4px 12px var(--shadow-soft);
-            transition: all 0.3s ease;
-        }
-
-        .theme-toggle:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px var(--shadow-soft);
-        }
-        
-        .updated {
+        .last-updated {
+            text-align: center;
             color: var(--text-light);
-            font-size: 0.875rem;
-            margin-top: 8px;
-        }
-        
-        .contact {
-            background: linear-gradient(135deg, rgba(250, 247, 240, 0.6) 0%, rgba(248, 244, 237, 0.6) 100%);
-            padding: 35px;
-            border-radius: 20px;
-            margin-top: 50px;
-            border: 1px solid rgba(232, 225, 213, 0.6);
+            font-size: 0.9rem;
+            margin-top: 40px;
         }
 
-        .contact h3 {
-            color: var(--soft-brown);
-            margin-top: 0;
-            font-size: 1.3rem;
+        body.teal-theme .last-updated {
+            color: rgba(255, 255, 255, 0.7);
         }
-        
+
         @media (max-width: 768px) {
-            .container {
-                padding: 40px 30px;
-                margin: 30px 20px;
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+                padding: 8px 14px;
+                font-size: 0.8rem;
             }
-            
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
             h1 {
                 font-size: 2rem;
             }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            h3 {
-                font-size: 1.1rem;
-            }
 
             .logo {
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
             }
         }
     </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle between light and teal theme">🎨 Switch Theme</button>
-    
+    <button class="theme-toggle" onclick="toggleTheme()">🎨 Switch Theme</button>
+
     <div class="container">
-        <a href="./" class="back-link">
-            <span>←</span> Back to RYDL
-        </a>
-        
+        <a href="index.html" class="back-link">← Back to RYDL</a>
+
         <div class="header">
-                    <img src="Terms-Logo.png" alt="RYDL Logo" class="logo" id="logo">
+            <img src="Terms-Logo.png" alt="RYDL Terms" class="logo">
             <h1>Terms of Service</h1>
-            <p class="updated">Last Updated: October 24, 2025</p>
+            <p class="tagline">Please read these terms carefully</p>
         </div>
-        
-        <h3>1. Acceptance of Terms</h3>
-        <p>By downloading, installing, or using RYDL, you agree to be bound by these Terms of Service. If you do not agree, do not use the app.</p>
-        
-        <h3>2. License to Use</h3>
-        <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use RYDL for personal, non-commercial purposes.</p>
-        
-        <h3>3. User Conduct</h3>
-        <p>You agree NOT to:</p>
-        <ul>
-            <li>Use offensive, inappropriate, or abusive usernames</li>
-            <li>Harass, bully, or threaten other users</li>
-            <li>Cheat or exploit bugs to gain unfair advantages</li>
-            <li>Attempt to hack or reverse engineer the app</li>
-            <li>Spam other users with challenges or requests</li>
-        </ul>
-        
-        <h3>4. User-Generated Content</h3>
-        <p>Your username and game results may be visible to other users. You are responsible for any content you create. We reserve the right to remove inappropriate usernames.</p>
-        
-        <h3>5. Account Termination</h3>
-        <p>We reserve the right to suspend or terminate your account if you violate these terms or engage in inappropriate behavior.</p>
-        
-        <h3>6. Disclaimer of Warranties</h3>
-        <p>RYDL is provided "as is" without warranties of any kind. We do not guarantee:</p>
-        <ul>
-            <li>Uninterrupted or error-free service</li>
-            <li>That the app will meet your expectations</li>
-            <li>That data will never be lost</li>
-        </ul>
-        
-        <h3>7. Limitation of Liability</h3>
-        <p>We are not liable for:</p>
-        <ul>
-            <li>Loss of data or game progress</li>
-            <li>Indirect or consequential damages</li>
-            <li>Damages exceeding the amount you paid for the app (which is $0)</li>
-        </ul>
-        
-        <h3>8. In-App Purchases</h3>
-        <p>If we offer in-app purchases in the future:</p>
-        <ul>
-            <li>All purchases are final and non-refundable (subject to applicable law)</li>
-            <li>Refunds are handled through the App Store per Apple's policies</li>
-        </ul>
-        
-        <h3>9. Intellectual Property</h3>
-        <p>All content, trademarks, and intellectual property in RYDL are owned by us or our licensors. You may not copy, modify, or distribute any part of the app.</p>
-        
-        <h3>10. Changes to Terms</h3>
-        <p>We may modify these terms at any time. Continued use of the app after changes constitutes acceptance of the new terms.</p>
-        
-        <h3>11. Governing Law</h3>
-        <p>These terms are governed by the laws of the United States, without regard to conflict of law provisions.</p>
-        
-        <div class="contact">
-            <h3>Contact Us</h3>
-            <p>If you have questions about these terms of service:</p>
-            <p><strong>Email:</strong> <a href="mailto:support@rydl.app">support@RYDL.app</a></p>
-            <p><strong>In-App:</strong> Settings → Terms of Service</p>
+
+        <div class="content">
+            <h2>Acceptance of Terms</h2>
+            <p>By downloading, installing, or using RYDL, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the app.</p>
+
+            <h2>Use of the Service</h2>
+            <p>RYDL is provided for your personal, non-commercial use. You agree to:</p>
+            <ul>
+                <li>Use the app in accordance with all applicable laws and regulations</li>
+                <li>Not attempt to cheat, exploit bugs, or manipulate game mechanics unfairly</li>
+                <li>Not use the app to harass, abuse, or harm other players</li>
+                <li>Not attempt to reverse engineer or modify the app</li>
+            </ul>
+
+            <h2>User Accounts</h2>
+            <p>If you create an account, you are responsible for:</p>
+            <ul>
+                <li>Maintaining the security of your account credentials</li>
+                <li>All activities that occur under your account</li>
+                <li>Notifying us immediately of any unauthorized access</li>
+            </ul>
+
+            <h2>Intellectual Property</h2>
+            <p>RYDL, including all content, features, and functionality, is owned by us and protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, or create derivative works without our express permission.</p>
+
+            <h2>In-App Purchases</h2>
+            <p>RYDL may offer in-app purchases for premium features. All purchases are final and non-refundable except as required by law. Prices are subject to change without notice.</p>
+
+            <h2>Termination</h2>
+            <p>We reserve the right to terminate or suspend your account and access to RYDL at our sole discretion, without notice, for conduct that we believe violates these Terms of Service or is harmful to other users, us, or third parties.</p>
+
+            <h2>Disclaimer of Warranties</h2>
+            <p>RYDL is provided "as is" without warranties of any kind, either express or implied. We do not guarantee that the app will be uninterrupted, secure, or error-free.</p>
+
+            <h2>Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use RYDL.</p>
+
+            <h2>Changes to Terms</h2>
+            <p>We may modify these Terms of Service at any time. We will notify you of significant changes via the app or email. Your continued use of RYDL after such changes constitutes acceptance of the new terms.</p>
+
+            <h2>Governing Law</h2>
+            <p>These Terms of Service are governed by and construed in accordance with applicable laws, without regard to conflict of law principles.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions about these Terms of Service, please contact us at <a href="mailto:legal@rydl.app" style="color: var(--cozy-orange); text-decoration: none;">legal@rydl.app</a></p>
+
+            <p class="last-updated">Last updated: October 26, 2025</p>
         </div>
     </div>
-    
+
     <script>
         function toggleTheme() {
             const body = document.body;
-            const logoImg = document.getElementById('logoImg');
+            const favicon = document.getElementById('favicon');
+            const appleFavicon = document.getElementById('appleFavicon');
+            
+            body.classList.toggle('teal-theme');
             const isTeal = body.classList.contains('teal-theme');
             
             if (isTeal) {
-                body.classList.remove('teal-theme');
-                logoImg.src = 'RYDL-Logo-Light.png';
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.classList.add('teal-theme');
-                logoImg.src = 'RYDL-Logo-Teal.png';
+                favicon.href = 'app-icon-teal.png';
+                appleFavicon.href = 'app-icon-teal.png';
                 localStorage.setItem('theme', 'teal');
+            } else {
+                favicon.href = 'app-icon-cream.png';
+                appleFavicon.href = 'app-icon-cream.png';
+                localStorage.setItem('theme', 'light');
             }
         }
-        
+
         document.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('theme');
-            const logoImg = document.getElementById('logoImg');
+            const favicon = document.getElementById('favicon');
+            const appleFavicon = document.getElementById('appleFavicon');
             
             if (savedTheme === 'teal') {
                 document.body.classList.add('teal-theme');
-                logoImg.src = 'RYDL-Logo-Teal.png';
+                favicon.href = 'app-icon-teal.png';
+                appleFavicon.href = 'app-icon-teal.png';
             }
         });
     </script>
