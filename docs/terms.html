@@ -22,6 +22,18 @@
             --shadow-warm: rgba(212, 133, 61, 0.2);
         }
 
+        body.teal-theme {
+            --warm-cream: #5a8f8f;
+            --bg-gradient-start: #5a8f8f;
+            --bg-gradient-end: #4a7a7a;
+            --soft-brown: #f0a868;
+            --deep-brown: #d4853d;
+            --text-dark: #2c2c2c;
+            --text-light: #555555;
+            --border-soft: #477373;
+            --shadow-soft: rgba(74, 122, 122, 0.25);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -36,6 +48,11 @@
             line-height: 1.6;
             position: relative;
             overflow-x: hidden;
+            transition: background 0.4s ease;
+        }
+
+        body.teal-theme {
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
         }
 
         body::before {
@@ -189,6 +206,30 @@
             text-decoration: none;
             color: var(--cozy-orange);
         }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            box-shadow: 0 4px 12px var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px var(--shadow-soft);
+        }
         
         .updated {
             color: var(--text-light);
@@ -236,13 +277,15 @@
     </style>
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleTheme()">🎨 Switch Theme</button>
+    
     <div class="container">
         <a href="./" class="back-link">
             <span>←</span> Back to RYDL
         </a>
         
         <div class="header">
-            <img src="RYDL-Logo-Light.png" alt="RYDL Logo" class="logo">
+            <img src="RYDL-Logo-Light.png" alt="RYDL Logo" class="logo" id="logoImg">
             <h1>Terms of Service</h1>
             <p class="updated">Last Updated: October 24, 2025</p>
         </div>
@@ -308,5 +351,33 @@
             <p><strong>In-App:</strong> Settings → Terms of Service</p>
         </div>
     </div>
+    
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const logoImg = document.getElementById('logoImg');
+            const isTeal = body.classList.contains('teal-theme');
+            
+            if (isTeal) {
+                body.classList.remove('teal-theme');
+                logoImg.src = 'RYDL-Logo-Light.png';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('teal-theme');
+                logoImg.src = 'RYDL-Logo-Teal.png';
+                localStorage.setItem('theme', 'teal');
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const logoImg = document.getElementById('logoImg');
+            
+            if (savedTheme === 'teal') {
+                document.body.classList.add('teal-theme');
+                logoImg.src = 'RYDL-Logo-Teal.png';
+            }
+        });
+    </script>
 </body>
 </html>
