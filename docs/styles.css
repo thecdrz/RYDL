@@ -27,7 +27,7 @@ body.teal-theme {
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body { min-height: 100%; }
+html, body { min-height: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -67,10 +67,11 @@ body.teal-theme .nav a { color: rgba(255,255,255,0.9); }
 .theme-toggle:hover { transform: translateY(-2px); box-shadow: 0 6px 16px var(--shadow-soft); }
 
 /* Typography */
-h1, h2, .tagline { font-family: 'Playfair Display', serif; }
-h1 { font-size: 5rem; font-weight: 600; margin-bottom: 15px; }
-h2 { font-size: 1.6rem; font-weight: 600; margin: 25px 0 12px; color: var(--text-dark); }
-.tagline { color: var(--soft-brown); font-size: 1rem; }
+h1, h2, h3, .tagline { font-family: 'Playfair Display', serif; }
+h1 { font-size: 5rem; font-weight: 600; margin-bottom: 15px; letter-spacing: -0.5px; }
+h2 { font-size: 1.6rem; font-weight: 600; margin: 25px 0 12px; color: var(--text-dark); letter-spacing: -0.3px; }
+h3 { font-size: 1.25rem; font-weight: 600; color: var(--text-dark); letter-spacing: -0.2px; }
+.tagline { color: var(--soft-brown); font-size: 1rem; letter-spacing: -0.2px; }
 /* Larger hero tagline for the homepage */
 .tagline-hero { font-size: 3rem; font-weight: 500; letter-spacing: -0.5px; }
 body.teal-theme h1 { color: #fff; }
