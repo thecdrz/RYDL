@@ -72,7 +72,8 @@
         </div>
 
         <div class="screenshots-section">
-            <div class="screenshots-carousel">
+            <button class="scroll-arrow scroll-left" onclick="scrollScreenshots('left')" aria-label="Scroll left">‹</button>
+            <div class="screenshots-carousel" id="screenshotsCarousel">
                 <img src="screenshots/01.PNG" alt="RYDL Screenshot 1" class="screenshot">
                 <img src="screenshots/02.PNG" alt="RYDL Screenshot 2" class="screenshot">
                 <img src="screenshots/03.PNG" alt="RYDL Screenshot 3" class="screenshot">
@@ -83,6 +84,7 @@
                 <img src="screenshots/08.PNG" alt="RYDL Screenshot 8" class="screenshot">
                 <img src="screenshots/09.PNG" alt="RYDL Screenshot 9" class="screenshot">
             </div>
+            <button class="scroll-arrow scroll-right" onclick="scrollScreenshots('right')" aria-label="Scroll right">›</button>
         </div>
     </div>
     

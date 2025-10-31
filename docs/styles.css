@@ -107,14 +107,19 @@ body.teal-theme .card { background: rgba(255,255,255,0.95); }
 .coming-soon { display: inline-block; margin-left: 8px; font-size: 0.8rem; color: var(--cozy-orange); background: linear-gradient(135deg, rgba(212, 133, 61, 0.12) 0%, rgba(212, 133, 61, 0.08) 100%); padding: 5px 12px; border-radius: 12px; border: 1px solid rgba(212, 133, 61, 0.25); vertical-align: middle; font-weight: 500; box-shadow: 0 2px 8px rgba(212, 133, 61, 0.15); }
 
 /* Screenshots section */
-.screenshots-section { margin: 60px 0 40px; padding: 0 20px; }
-.screenshots-carousel { display: flex; gap: 20px; overflow-x: auto; overflow-y: hidden; padding: 20px 0; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--soft-brown) transparent; }
-.screenshots-carousel::-webkit-scrollbar { height: 8px; }
+.screenshots-section { position: relative; margin: 60px 0 40px; padding: 0 60px; }
+.screenshots-carousel { display: flex; gap: 16px; overflow-x: auto; overflow-y: hidden; padding: 20px 0; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: var(--soft-brown) transparent; }
+.screenshots-carousel::-webkit-scrollbar { height: 6px; }
 .screenshots-carousel::-webkit-scrollbar-track { background: transparent; }
-.screenshots-carousel::-webkit-scrollbar-thumb { background: var(--soft-brown); border-radius: 4px; }
-.screenshot { height: 500px; width: auto; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); scroll-snap-align: center; flex-shrink: 0; transition: transform 0.3s ease; }
-.screenshot:hover { transform: scale(1.02); }
+.screenshots-carousel::-webkit-scrollbar-thumb { background: var(--soft-brown); border-radius: 3px; }
+.screenshot { height: 380px; width: auto; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.12); scroll-snap-align: start; flex-shrink: 0; transition: transform 0.25s ease; }
+.screenshot:hover { transform: scale(1.03); }
+.scroll-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: 1px solid rgba(0,0,0,0.1); border-radius: 50%; width: 44px; height: 44px; font-size: 2rem; color: var(--text-dark); cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.scroll-arrow:hover { background: rgba(255,255,255,1); transform: translateY(-50%) scale(1.1); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+.scroll-left { left: 10px; }
+.scroll-right { right: 10px; }
 body.teal-theme .screenshots-carousel::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.5); }
+body.teal-theme .scroll-arrow { background: rgba(255,255,255,0.85); color: var(--text-dark); }
 
 /* Features section */
 .features-section { margin: 40px 0 50px; }
@@ -144,6 +149,12 @@ body.teal-theme .feature-text { color: rgba(255,255,255,0.75); }
   .content.card { padding: 28px 22px; }
   .links-grid { grid-template-columns: 1fr; gap: 14px; max-width: 100%; padding: 0 10px; }
   .features-section { margin: 30px 0 40px; }
+  .screenshots-section { margin: 40px 0 30px; padding: 0 50px; }
+  .screenshots-carousel { gap: 12px; padding: 15px 0; }
+  .screenshot { height: 320px; border-radius: 14px; }
+  .scroll-arrow { width: 36px; height: 36px; font-size: 1.6rem; }
+  .scroll-left { left: 5px; }
+  .scroll-right { right: 5px; }
   .features-grid { grid-template-columns: repeat(2, 1fr); max-width: 280px; gap: 14px 10px; }
   .feature-item { padding: 6px; }
   .feature-text { font-size: 0.75rem; }

@@ -28,6 +28,17 @@ function toggleTheme() {
   }
 }
 
+// Screenshot carousel scroll function
+function scrollScreenshots(direction) {
+  const carousel = document.getElementById('screenshotsCarousel');
+  const scrollAmount = 300;
+  if (direction === 'left') {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  } else {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+}
+
 // Load saved theme on page load
 window.addEventListener('DOMContentLoaded', function() {
   const savedTheme = localStorage.getItem('theme');
