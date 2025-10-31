@@ -99,6 +99,18 @@ body.teal-theme .card { background: rgba(255,255,255,0.95); }
 .link-text { font-size: 0.95rem; white-space: nowrap; letter-spacing: .3px; }
 .span-full { grid-column: 1 / -1; }
 
+/* Site Footer */
+.site-footer { margin-top: 80px; padding: 40px 20px 30px; border-top: 1px solid rgba(0,0,0,0.06); }
+.footer-content { max-width: 600px; margin: 0 auto; text-align: center; }
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+.footer-link { color: var(--text-light); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s ease; }
+.footer-link:hover { color: var(--cozy-orange); }
+.footer-text { color: var(--text-light); font-size: 0.85rem; margin: 0; }
+body.teal-theme .site-footer { border-top-color: rgba(255,255,255,0.15); }
+body.teal-theme .footer-link { color: rgba(255,255,255,0.75); }
+body.teal-theme .footer-link:hover { color: rgba(255,255,255,1); }
+body.teal-theme .footer-text { color: rgba(255,255,255,0.6); }
+
 /* Footer */
 .footer { text-align: center; padding: 40px 0 30px; }
 .footer-links { display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 0; flex-wrap: wrap; }
@@ -158,6 +170,10 @@ body.teal-theme .feature-text { color: rgba(255,255,255,0.75); }
   .features-grid { grid-template-columns: repeat(2, 1fr); max-width: 280px; gap: 14px 10px; }
   .feature-item { padding: 6px; }
   .feature-text { font-size: 0.75rem; }
+  .site-footer { margin-top: 60px; padding: 30px 15px 25px; }
+  .footer-links { gap: 16px; }
+  .footer-link { font-size: 0.85rem; }
+  .footer-text { font-size: 0.8rem; }
 }
 
 @media (max-width: 480px) {
