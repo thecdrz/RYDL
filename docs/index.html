@@ -74,22 +74,27 @@
         <div class="screenshots-section">
             <button class="scroll-arrow scroll-left" onclick="scrollScreenshots('left')" aria-label="Scroll left">‹</button>
             <div class="screenshots-carousel" id="screenshotsCarousel">
-                <img src="screenshots/01.PNG" alt="RYDL Screenshot 1" class="screenshot">
-                <img src="screenshots/02.PNG" alt="RYDL Screenshot 2" class="screenshot">
-                <img src="screenshots/03.PNG" alt="RYDL Screenshot 3" class="screenshot">
-                <img src="screenshots/04.PNG" alt="RYDL Screenshot 4" class="screenshot">
-                <img src="screenshots/05.PNG" alt="RYDL Screenshot 5" class="screenshot">
-                <img src="screenshots/06.PNG" alt="RYDL Screenshot 6" class="screenshot">
-                <img src="screenshots/07.PNG" alt="RYDL Screenshot 7" class="screenshot">
-                <img src="screenshots/08.PNG" alt="RYDL Screenshot 8" class="screenshot">
-                <img src="screenshots/09.PNG" alt="RYDL Screenshot 9" class="screenshot">
+                <img src="screenshots/01.PNG" alt="RYDL Screenshot 1" class="screenshot" onclick="openLightbox(this)">
+                <img src="screenshots/02.PNG" alt="RYDL Screenshot 2" class="screenshot" onclick="openLightbox(this)">
+                <img src="screenshots/03.PNG" alt="RYDL Screenshot 3" class="screenshot" onclick="openLightbox(this)">
+                <img src="screenshots/04.PNG" alt="RYDL Screenshot 4" class="screenshot" onclick="openLightbox(this)">
+                <img src="screenshots/05.PNG" alt="RYDL Screenshot 5" class="screenshot" onclick="openLightbox(this)">
+                <img src="screenshots/06.PNG" alt="RYDL Screenshot 6" class="screenshot" onclick="openLightbox(this)">
+                <img src="screenshots/07.PNG" alt="RYDL Screenshot 7" class="screenshot" onclick="openLightbox(this)">
+                <img src="screenshots/08.PNG" alt="RYDL Screenshot 8" class="screenshot" onclick="openLightbox(this)">
+                <img src="screenshots/09.PNG" alt="RYDL Screenshot 9" class="screenshot" onclick="openLightbox(this)">
             </div>
             <button class="scroll-arrow scroll-right" onclick="scrollScreenshots('right')" aria-label="Scroll right">›</button>
         </div>
 
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="lightbox-close">×</span>
+            <img src="" alt="" id="lightbox-img" class="lightbox-content">
+        </div>
+
         <footer class="site-footer">
             <div class="footer-content">
-                <p class="footer-text">© 2025 RYDL</p>
+                <p class="footer-text">🦊 © 2025 RYDL</p>
             </div>
         </footer>
     </div>

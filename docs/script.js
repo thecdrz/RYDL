@@ -39,6 +39,22 @@ function scrollScreenshots(direction) {
   }
 }
 
+// Lightbox functions
+function openLightbox(img) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightbox.style.display = 'flex';
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
 // Load saved theme on page load
 window.addEventListener('DOMContentLoaded', function() {
   const savedTheme = localStorage.getItem('theme');
